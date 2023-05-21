@@ -1,0 +1,42 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function dibujarRectangulo(x, y, base, altura, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(0, 0, 600, 400);
+
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, base, altura);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x, y, base, altura);
+
+    }
+
+    function escribirTexto(x, y, texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.font = "18px Arial"; //tipo de text
+        pincel.fillStyle = "green"; //color del texto
+        pincel.fillText(texto, x, y); //el texto y su ubicación
+    }
+
+    function arrayGraficas(x,y){
+        var anno = [20,40,38,70,29];
+        var color = ["green","yellow","pink","brown","red"];
+
+        escribirTexto(x, y - 10, "HOLA");
+        
+        for(var i = 0; i < anno.length; i++){
+            dibujarRectangulo(x,y,50,anno[i],color[i]);
+            y = y + anno[i];
+        }
+
+    }
+    //dibujarRectangulo(100, 100, 50, 50, "brown");
+    //escribirTexto(100, 90, "HOLA");
+    arrayGraficas(150,100);
+</script>

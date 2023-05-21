@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+
+<h1>programa</h1>
+
+<script>
+	//var nombre = prompt("INFORME SU NOMRE:");
+	//var peso = prompt(nombre + ", INFORME SU PESO:");
+	//var altura = prompt(nombre + ", INFORME SU ALTURA:");
+	// Si bien las variables de arriba reciben de parámetros de entrada, lo que el usuario teclee
+	// es no quiere decir que lo guardará como número, siempre lo recibirá como String y no como int
+	// sin embargo el compilador de JS si convierte el String a Int cuando es una multiplicación,
+	// pero concatena cuando está el '+' de por medio, por eso tenemos que parsear.
+	
+	function saltalinea(){
+		document.write("<br>");
+	}
+
+	function imprimir(frase){
+		saltalinea();
+
+		document.write(frase);
+		saltalinea();
+	}
+	function calcularIMC(peso,altura){
+		return imc = peso / (altura * altura);
+	}
+
+    var victorias = parseInt(prompt("Ingrese la cantidad de victorias:"));
+    var empates = parseInt(prompt("Ingrese la cantidad de empates:"));
+
+    var puntosTotal = victorias * 3 + empates;
+
+	imprimir("El total de puntos es: " + puntosTotal);
+
+	//se implementan condiciones IF
+
+	if (puntosTotal > 10){
+		imprimir("GG EASY");
+	}
+
+	if (puntosTotal < 10){
+		imprimir("REPORT TEAM");
+	}
+
+	if (puntosTotal == 10){
+		imprimir("GG WP");
+	}
+</script>

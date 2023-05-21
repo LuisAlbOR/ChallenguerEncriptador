@@ -1,0 +1,27 @@
+<canvas width="600" height="600"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.beginPath();//con esto se hacen las lineas
+    pincel.moveTo(50,50);//con esto movemos a donde queremos trazar
+
+    //Diseñar el triangulo negro
+    pincel.fillStyle = "black";//Color del triangulo
+    pincel.lineTo(50,400);//Probar cambiando valores para ver a donde apunta
+    pincel.lineTo(400,400);
+    //Rellenar la figura
+    pincel.fill();
+
+    
+    pincel.beginPath();//con esto se hacen las lineas
+    pincel.moveTo(100, 175);//con esto movemos a donde queremos trazar
+
+    //Diseñar el triangulo blanc
+    pincel.fillStyle = "white";//Color del triangulo
+    pincel.lineTo(100, 350);//Probar cambiando valores para ver a donde apunta
+    pincel.lineTo(275, 350);
+    //Rellenar la figura
+    pincel.fill();
+</script>

@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+
+<h1>programa</h1>
+
+<script>
+	var nombre = prompt("INFORME SU NOMRE:");
+	var peso = prompt(nombre + ", INFORME SU PESO:");
+	var altura = prompt(nombre + ", INFORME SU ALTURA:");
+
+	function saltalinea(){
+		document.write("<br>");
+	}
+
+	function imprimir(frase){
+		saltalinea();
+
+		document.write(frase);
+		saltalinea();
+	}
+	function calcularIMC(peso,altura){
+		return imc = peso / (altura * altura);
+	}
+
+	imprimir(nombre + ", SU IMC ES: " + calcularIMC(peso, altura));
+</script>

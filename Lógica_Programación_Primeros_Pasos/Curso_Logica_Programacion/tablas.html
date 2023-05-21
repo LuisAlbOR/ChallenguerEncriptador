@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numero = 1;
+
+    imprimir("WHILE");
+    while(numero <=10){
+        imprimir("1 * " + numero + " = " + (numero*1));
+        numero ++;
+    }
+
+    imprimir("FOR");
+    for(var numero = 1; numero <= 10; numero++){
+        imprimir("1 * " + numero + " = " + (numero * 1));
+    }
+</script>

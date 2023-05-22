@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Contacto - Barberìa Master</title>
-    <link rel="stylesheet" href="../HTML_CSS_DOS/reset.css">
-    <link rel="stylesheet" href="../HTML_CSS_DOS/productos.css">
+    <link rel="stylesheet" href="../HTML_CSS_DOS/reset_style.css">
+    <link rel="stylesheet" href="../HTML_CSS_DOS/style.css">
 
 </head>
 
@@ -18,8 +18,8 @@
 
             <nav>
                 <ul>
-                    <li><a href="../HTML_CSS3_FIRSTWEB/home.html">Home</a></li>
-                    <li><a hred="../HTML_CSS_DOS/productos.html">Productos</a></li>
+                    <li><a href="../HTML_CSS3_FIRSTWEB/index.html">Home</a></li>
+                    <li><a href="../HTML_CSS_DOS/productos.html">Productos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
@@ -28,7 +28,48 @@
     </header>
 
     <main>
+        <form>
+            <label for="nombre_apellido">Nombre y Apellido</label>
+            <input type="text" id="nombre_apellido" class="input_padron">
+        
+            <label for="correo_electronico">Correro electronico</label>
+            <input type="text" id="correo_electronico" class="input_padron">
 
+            <label for="telefono">Telefono</label>
+            <input type="text" id="telefono" class="input_padron">
+        
+            <label for="mensaje">Mensaje</label>
+            <textarea cols="70" rows="20" id="mensaje"></textarea>
+
+            <div>
+                <p>¿Cómo le gustaria que lo contactemos?</p>
+
+                <label for="radio_email"><input type="radio" name="contacto" value="email" id="radio_email">email</label>
+                
+
+                <label for="radio_telefono"><input type="radio" name="contacto" value="telefono" id="radio_telefono">telefono</label>
+                
+
+                <label for="radio_whatsapp"><input type="radio" name="contacto"  value="whatsapp" id="radio_whatsapp">whatsapp</label>
+                
+
+            </div>
+
+            <div>
+                <p>¿En que horario desea ser atendido?</p>
+                <select>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </div>
+            
+
+            <label class="checkbox"><input type="checkbox">¿Le gustaria recibir novedades de la  barberia Alura?</label>
+        
+            <input type="submit" value="Enviar formulario">
+
+        </form>
     </main>
     
     <footer>

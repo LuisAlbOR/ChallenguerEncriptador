@@ -149,3 +149,37 @@ td,th{
     border: 1px solid #000000;
     padding: 8px 15px;
 }
+
+/*CSS para el index*/
+.banner{
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.main p{
+    margin: 0 0 1em;
+}
+
+.main strong{
+    font-weight: bold;
+}
+
+.main em{
+    font-style: italic;
+}
+
+.utencilios{
+    width: 13.5%;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.imgDiff{
+    width: 60%;
+}

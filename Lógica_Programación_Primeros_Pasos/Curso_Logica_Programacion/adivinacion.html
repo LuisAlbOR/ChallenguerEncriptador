@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+
+<h1>Programa calcular si tienes sobre peso u obesidad (índice de masa corporal)</h1>
+
+<script>
+    function saltalinea() {
+            document.write("<br>");
+        }
+
+    function imprimir(frase) {
+            document.write(frase);
+            saltalinea();
+    }
+    
+    var numeroRandom = Math.round(Math.random()* 10);
+    var numeroUsuario = parseInt(prompt("Ingrese un número:"));
+
+    if(numeroUsuario == numeroRandom){
+        imprimir("Usted acertó");
+    }   else{
+        imprimir("Usted falló, el número es: " + numeroRandom);
+    }
+
+</script>

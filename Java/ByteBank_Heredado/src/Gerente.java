@@ -1,38 +1,13 @@
-public class Gerente {
+public class Gerente extends Funcionario{
+    private String clave;
+    private String password;
 
-    private String nombre;
-    private String documento;
-    private double salario;
-
-    public Gerente(){
-
-    }
-    public void ingresarNombre(String nombreGerente){
-        this.nombre = nombreGerente;
-    }
-
-    public void ingresarDocumento(String documentoGerente){
-        this.documento = documentoGerente;
-    }
-
-    public void ingresarSalario(double salarioGerente){
-        this.salario += salarioGerente;
-    }
-
-    public String obtenerNombre(){
-        return nombre;
-    }
-
-    public String obtenerDocumento(){
-        return documento;
-    }
-
-    public double obtenerSalario(){
-        return salario;
-    }
-
-    public double obtenerBonificación(){
-        //La bonificación de un gerente es del 100%
-        return this.salario;
+    public void ingresaClave(String claveGerente){ this.clave = claveGerente;}
+    public void ingresarPassword(String passwordGerente){ this.password = passwordGerente;}
+    public String obtenerClave(){ return clave;}
+    public String obtenerPassword(){ return password;}
+    //Se añade método iniciar sesión para validar las credenciales
+    public boolean iniciarSesion(String claveGerente, String passwordGerente){
+        return clave == claveGerente && password == passwordGerente;
     }
 }

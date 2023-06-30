@@ -24,7 +24,7 @@ public class CrearGerente {
         //Se muestra el aumento
         System.out.println("Salario del gerente después del aumento: " + gerenteGuicho.obtenerSalario());
         //Se muestra la bonificación
-        System.out.println("Bonificación del  gerente: " + gerenteGuicho.obtenerSalario());
+        System.out.println("Bonificación del  gerente: " + gerenteGuicho.obtenerBonificacion());
         //Se ingresa password y clave después de la herencia
         gerenteGuicho.ingresaClave("master");
         gerenteGuicho.ingresarPassword("guichomaster");

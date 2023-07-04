@@ -1,5 +1,5 @@
 *{
-    background: #c3c5ec;
+    background: #77788d;
     font-family: 'Oxygen';
     font-weight: 400;
     font-size: 32px;
@@ -7,5 +7,84 @@
 }
 
 .logo_alura{
-    
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 15%;
+}
+
+main{
+    display: flex;
+    margin-bottom: 60px;
+    margin-left: 80px;
+}
+
+.text_area{
+    border: none;
+    color: #0a0dfc;
+    margin-top: 100px;
+    text-transform: lowercase;    
+}
+
+::placeholder { color: #0a0dfc;}
+
+.text_area:focus{
+    outline: none;
+}
+
+.msj_encriptado{
+    background: #FFFFFF;
+    background-image: url("img/Muñeco.png");
+    background-repeat: no-repeat;
+    border: none;
+    color: #FFFFFF;
+    margin-left: 100px;
+    margin-top: 30px;
+    padding-left: 30px;
+    position: fixed;
+}
+
+.msj_encriptado:focus{
+    outline: none;
+}
+
+.botones{
+    display: flex;
+    margin-top: 20px;
+}
+
+.btn_encriptar{
+    background-color: #3538e2;
+    border: 1px solid #3538e2;
+    border-radius: 25px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 70px;
+    width: 320px;
+}
+
+.btn_desencriptar{
+    background: #FFFFFF;
+    border: 1px solid #3538e2;
+    border-radius: 25px;
+    color: #3538e2;
+    cursor: pointer;
+    height: 70px;
+    margin-left: 30px;
+    width: 320px;
+}
+.btn_copiar{
+    border: 1px solid #3538e2;
+    border-radius: 25px;
+    color: #3538e2;
+    cursor: pointer;
+    height: 70px;
+    margin-left: 110px;
+    margin-top: 400px;
+    position: absolute;
+    width: 340px;
+}
+
+.informacion{
+    color: #0a0dfc;
+    font-size: 18px;
 }

@@ -16,6 +16,6 @@ public class CrearFuncionario {
         funcionarioWero.ingresarSalario(1000.00);
         System.out.println("Nuevo salario del  funcionario después del aumento: " + funcionarioWero.obtenerSalario());
         //Se muestra la bonificación
-        System.out.println("Bonificación del funcionario: " + funcionarioWero.obtenerBonificación());
+        System.out.println("Bonificación del funcionario: " + funcionarioWero.obtenerBonificacion());
     }
 }

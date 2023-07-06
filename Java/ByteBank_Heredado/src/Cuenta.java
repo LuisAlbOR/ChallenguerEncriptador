@@ -3,7 +3,7 @@ public class Cuenta {
     private double cuentaSaldo;
     private int cuentaBanco;
     private int cuentaReferencia;
-    private Cliente cuentaTitular;
+    private Cliente cuentaTitular = new Cliente();
 
     public Cuenta(int cuentaBanco, int cuentaReferencia){
         this.cuentaBanco = cuentaBanco;
@@ -26,7 +26,7 @@ public class Cuenta {
 
     public boolean cuentaTransferir(double cantidadTransferir, Cuenta nombreCuenta) {
         if(cantidadTransferir <= this.cuentaSaldo) {
-            this.cuentaSaldo -= cantidadTransferir;
+            this.cuentaRetirar(cantidadTransferir);
             nombreCuenta.cuentaDepositar(cantidadTransferir);
             return true;
         }

@@ -1,7 +1,7 @@
 public class CrearFuncionario {
 
     public static void main(String[] args) {
-        Funcionario funcionarioWero = new Funcionario();
+        Funcionario funcionarioWero = new Contador();
         //Se ingresan datos para probar los setters
         funcionarioWero.ingresarNombre("The Werish");
         funcionarioWero.ingresarDocumento("Dev");

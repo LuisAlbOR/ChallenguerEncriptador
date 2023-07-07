@@ -1,6 +1,6 @@
 public class TesteControlBonificaciones {
     public static void main(String[] args) {
-        Funcionario funcionarioIliany = new Funcionario();
+        Funcionario funcionarioIliany = new COntador();
         funcionarioIliany.ingresarNombre("Iliany");
         funcionarioIliany.ingresarSalario(2000.00);
         //Se crea objeto de control de bonificaciones

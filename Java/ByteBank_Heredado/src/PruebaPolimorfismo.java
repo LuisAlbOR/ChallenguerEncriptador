@@ -1,7 +1,7 @@
 public class PruebaPolimorfismo {
     public static void main(String[] args) {
         //Se crea un objeto funcionario de manera normal
-        Funcionario funcionarioJulian = new Funcionario();
+        Funcionario funcionarioJulian = new Contador();
         funcionarioJulian.ingresarNombre("Julian");
         //Se prueba que métodos contiene
         System.out.println("Nombre del funcionario: " + funcionarioJulian.obtenerNombre());

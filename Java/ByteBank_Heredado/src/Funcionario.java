@@ -1,4 +1,4 @@
-public class Funcionario {
+public abstract class Funcionario {
     private String nombre;
     private String documento;
     private double salario;
@@ -32,7 +32,7 @@ public class Funcionario {
     }
 
     //La bonificación de un funcionario es del 10%
-    public double obtenerBonificacion(){ return this.salario * 0.05; }
+    public abstract double obtenerBonificacion();
 
     public byte obtenerTipoFuncionario(){ return tipoFuncionario;}
 }

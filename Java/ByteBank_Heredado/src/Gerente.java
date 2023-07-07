@@ -13,8 +13,9 @@ public class Gerente extends Funcionario{
     //La palabra super se usa para acceder a métodos y atributos de la clase padre
     //La bonificaión de un gerente es del 100% más la bonificación de un funcionario
 
+    @Override
     public double obtenerBonificacion(){
         System.out.println("Desde gerente");
-        return super.obtenerSalario() + super.obtenerBonificacion();
+        return super.obtenerSalario() + (this.obtenerSalario() * 0.05);
     }
 }

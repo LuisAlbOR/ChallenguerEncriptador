@@ -1,6 +1,6 @@
-public class Cuenta {
+public abstract class Cuenta {
     private int cuentaNumero;
-    private double cuentaSaldo;
+    protected double cuentaSaldo;
     private int cuentaBanco;
     private int cuentaReferencia;
     private Cliente cuentaTitular = new Cliente();
@@ -12,9 +12,7 @@ public class Cuenta {
     }
 
     //Método para sumarle saldo a la cuenta
-    public void cuentaDepositar (double cantidadAbonar){
-        this.cuentaSaldo += cantidadAbonar;
-    }
+    public abstract void cuentaDepositar (double cantidadAbonar);
 
     public boolean cuentaRetirar(double cantidadRetirar) {
         if(cantidadRetirar <= this.cuentaSaldo) {

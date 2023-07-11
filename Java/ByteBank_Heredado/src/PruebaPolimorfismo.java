@@ -10,7 +10,7 @@ public class PruebaPolimorfismo {
         Gerente gerenteKevin = new Gerente();
         gerenteKevin.ingresarNombre("Kevin");
         //Se prueba si tiene el método iniciar sesión
-        System.out.println("El gerente " + gerenteKevin.obtenerNombre() + " puede iniciar sesión? " + gerenteKevin.iniciarSesion(null,null));
+        System.out.println("El gerente " + gerenteKevin.obtenerNombre() + " puede iniciar sesión? " + gerenteKevin.iniciarSesion(null));
         /*
         consejo del polimorfismo:
         El elemento más génerico puede ser adaptado al más especifico

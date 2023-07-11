@@ -27,11 +27,9 @@ public class CrearGerente {
         System.out.println("Bonificación del  gerente: " + gerenteGuicho.obtenerBonificacion());
         //Se ingresa password y clave después de la herencia
         gerenteGuicho.ingresaClave("master");
-        gerenteGuicho.ingresarPassword("guichomaster");
         //Se muestran los datos
         System.out.println("Clave del gerente: " + gerenteGuicho.obtenerClave());
-        System.out.println("Password del gerente: " + gerenteGuicho.obtenerPassword());
         //Se prueba el método para iniciar sesión
-        System.out.println("Iniciando sesión... " + gerenteGuicho.iniciarSesion("master","guichomaster"));
+        System.out.println("Iniciando sesión... " + gerenteGuicho.iniciarSesion("master"));
     }
 }

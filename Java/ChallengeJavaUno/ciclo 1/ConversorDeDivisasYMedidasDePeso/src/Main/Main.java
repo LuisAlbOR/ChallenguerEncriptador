@@ -1,13 +1,19 @@
 package Main;
 
-import Controller.Login.ControllerLogin;
+import javax.swing.JFrame;
 
-public class Main {
+
+public class Main{
     
     public static void main(String[] args) {
         View.Login.Login login = new View.Login.Login();
-        Controller.Login.ControllerLogin controllerLogin = new ControllerLogin(login);
-        controllerLogin.executeView();
+        
+        login.setVisible(true);
+        login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        login.setResizable(false);
+        login.setLocationRelativeTo(null);
+        login.setSize(600,600);
     }
+
 
 }

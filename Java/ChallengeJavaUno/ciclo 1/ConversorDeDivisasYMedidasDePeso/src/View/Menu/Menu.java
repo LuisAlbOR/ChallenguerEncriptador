@@ -4,6 +4,7 @@ public class Menu extends javax.swing.JFrame {
 
 
     public Menu() {
+        setLayout(null);
         setTitle("Exchange Master - Menu");
         initComponents();
     }

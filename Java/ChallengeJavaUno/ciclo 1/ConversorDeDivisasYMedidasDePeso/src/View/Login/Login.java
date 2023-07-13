@@ -1,23 +1,27 @@
 package View.Login;
 
-import java.io.File;
-import javax.swing.ImageIcon;
+import java.awt.Image;
+import java.awt.Toolkit;
+    import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
-public class Login extends javax.swing.JFrame {
+public class Login extends javax.swing.JFrame implements Model.Views{
 
     
     public Login() {
+        setLayout(null);
         setTitle("Exchange Master");
         initComponents();
         
         //Se ingresa el icono de la app en lugar de la de java
-        File iconFile = new File("D:\\\\Alura\\\\AluraCursos\\\\Java\\\\ChallengeJavaUno\\\\ciclo 1\\\\Diseño\\\\Imagenes\\\\logoApp.ico");
-        if(iconFile.exists()){
-            ImageIcon iconApp = new ImageIcon(iconFile.getAbsolutePath());
-            setIconImage(iconApp.getImage());
-        }
-        
+        ImageIcon iconApp = new ImageIcon(getClass().getResource("Images/logoApp.ico"));
+        setIconImage(iconApp.getImage());
                 
+    }
+    @Override
+    public Image getIconImage (){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("images/logoApp.png"));
+        return retValue;
     }
  
     @SuppressWarnings("unchecked")
@@ -81,11 +85,9 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        View.Menu.Menu menu = new View.Menu.Menu();
-        Controller.Menu.ControllerMenu controllerMenu = new Controller.Menu.ControllerMenu(menu);
-        Controller.Login.ControllerLogin controllerLogin = new Controller.Login.ControllerLogin();
-        controllerMenu.executeView();
-        controllerLogin.closeView();
+        this.executeView();
+        this.closeView();
+        
         //super.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -96,5 +98,20 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void executeView() {
+        View.Menu.Menu menu = new View.Menu.Menu();
+        menu.setVisible(true);
+        menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        menu.setResizable(false);
+        menu.setLocationRelativeTo(null);
+        menu.setSize(600, 600);
+    }
+
+    @Override
+    public void closeView() {
+        this.setVisible(false);
+    }
 
 }

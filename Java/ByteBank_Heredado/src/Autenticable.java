@@ -1,4 +1,4 @@
-public class FuncionarioAutenticar {
+public class Autenticable {
     private String clave;
 
     public void ingresarClave(String clave){

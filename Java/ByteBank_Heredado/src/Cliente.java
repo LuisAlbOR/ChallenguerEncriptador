@@ -1,4 +1,4 @@
-public class Cliente {
+public class Cliente implements Autenticable{
     private String clienteNombre;
     private char clienteSexo;
     private String clienteReferencia;
@@ -30,5 +30,15 @@ public class Cliente {
     }
     public void setClienteDireccion(String clienteDireccion) {
         this.clienteDireccion = clienteDireccion;
+    }
+
+    @Override
+    public void ingresarClave(String clave) {
+
+    }
+
+    @Override
+    public boolean iniciarSesion(String clave) {
+        return false;
     }
 }

@@ -1,9 +1,15 @@
-public class Gerente extends Funcionario{
+public class Gerente extends Funcionario implements Autenticable{
     private String clave;
 
     public void ingresaClave(String claveGerente){ this.clave = claveGerente;}
 
     public String obtenerClave(){ return clave;}
+
+
+    @Override
+    public void ingresarClave(String clave) {
+
+    }
 
     //Se añade método iniciar sesión para validar las credenciales
     public boolean iniciarSesion(String claveGerente){

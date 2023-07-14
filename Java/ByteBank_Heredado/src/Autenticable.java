@@ -1,11 +1,5 @@
-public class Autenticable {
-    private String clave;
+public interface Autenticable {
+    public void ingresarClave(String clave);
 
-    public void ingresarClave(String clave){
-        this.clave=clave;
-    }
-
-    public boolean iniciarSesion(String clave){
-        return clave == "AluraCursos";
-    }
+    public boolean iniciarSesion(String clave);
 }

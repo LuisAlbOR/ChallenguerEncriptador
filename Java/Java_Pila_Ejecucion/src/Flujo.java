@@ -12,12 +12,13 @@ public class Flujo {
         }
         public static void metodo2(){
             System.out.println("Ini do metodo2");
-            for(int i =1; i<= 5; i++){
+            System.out.println("Fim do metodo2");
+            /* for(int i =1; i<= 5; i++){
 
                 System.out.println(i);
-                /*//Causando un error en la ejecución
+                //Causando un error en la ejecución
                 int num = 0;
-                System.out.println(i/num);*/
+                System.out.println(i/num);
                 //Se implementa el bloque try - catch
                 try { // try = intenta
 
@@ -38,8 +39,9 @@ public class Flujo {
                     System.out.println(nullPointerException.getMessage());
                     nullPointerException.printStackTrace();
                 }
-            }
-            System.out.println("Fim do metodo2");
+            }*/
+            //Como se sabe, una excepcion es un objeto y por lo tanto nosotros podemos crear una excepcion o un objeto de ella
+            ArithmeticException exceptionArithmetic = new ArithmeticException(); //Así se pueden crear objeto para las excepciones
 
         }
 }

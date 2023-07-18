@@ -13,14 +13,23 @@ public class Flujo {
         public static void metodo2(){
             System.out.println("Ini do metodo2");
             for(int i =1; i<= 5; i++){
-                System.out.println("i");
+
+                System.out.println(i);
                 /*//Causando un error en la ejecución
                 int num = 0;
                 System.out.println(i/num);*/
                 //Se implementa el bloque try - catch
                 try { // try = intenta
-                    int num = 0;
-                    System.out.println(i/num);
+
+                    //comprobando que funcionan los dos tipos de excepciones
+                    if(i == 3){
+                        int num = 0;
+                        System.out.println(i/num);
+                    }
+
+                    String var = null;
+                    System.out.println(var.toString());
+
                 } catch (ArithmeticException arithmeticException){ //catch = atrapa
                     //Se debe saber que una excepcion es un objeto, por lo tanto tienen métodos que se pueden usar
                     System.out.println(arithmeticException.getMessage()); //obteniendo el mensaje de la excepcion

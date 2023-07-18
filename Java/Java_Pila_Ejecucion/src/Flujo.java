@@ -14,6 +14,9 @@ public class Flujo {
             System.out.println("Ini do metodo2");
             for(int i =1; i<= 5; i++){
                 System.out.println("i");
+                //Causando un error en la ejecución
+                int num = 0;
+                System.out.println(i/num);
             }
             System.out.println("Fim do metodo2");
 

@@ -41,7 +41,15 @@ public class Flujo {
                 }
             }*/
             //Como se sabe, una excepcion es un objeto y por lo tanto nosotros podemos crear una excepcion o un objeto de ella
-            ArithmeticException exceptionArithmetic = new ArithmeticException(); //Así se pueden crear objeto para las excepciones
+            //ArithmeticException exceptionArithmetic = new ArithmeticException(); //Así se pueden crear objeto para las excepciones
+            //Ahora con la palabra reservada "Throw" podemos lanzar la expceción fuera de los métodos, colocandolo en la pila de
+            //ejecución para romper  dicha pila
+            //throw exceptionArithmetic; //De esta forma podemos lanzar la excepcion con la manera tradicional de creación de objetos( referenciandolos)
+            //ahora como aquí va a morir el programa, si se ingresa codigo debajo de el "throw" habra error, ya que no serán ejecutadas
 
+            //Ahora, cabe aclarar que no se lanzan excepciones creando el objeto de la manera tradicional y que solo se pueden lanzar objetos
+            //del tipo exception,  a continución se mostrara com se lanzan las expceciones
+            throw new  ArithmeticException(); //De esta manera de lanzan expceciones de manera estandar
         }
+
 }

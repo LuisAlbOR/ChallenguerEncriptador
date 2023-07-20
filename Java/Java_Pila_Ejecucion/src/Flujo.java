@@ -2,22 +2,27 @@ public class Flujo {
 
         public static void main(String[] args) {
             System.out.println("Ini do main");
-            metodo1();
+            try {
+                metodo1();
+            } catch (Exception e) { //recorando el polimorfismo, podemos hace esto
+                e.printStackTrace();
+            }
             System.out.println("Fim do main");
         }
-        public static void metodo1(){
+        public static void metodo1() throws MiException{
             System.out.println("Ini do metodo1");
 
             //Ahora que creamos nuestra clase de excepción personalizada, la metemos en un bloque try catch
-            try {
+            /*try {
                 metodo2();
             } catch (MiException exception){
                 exception.printStackTrace();//Ahora se puede tratar la clase como cualquier otro objeto de N tipo de exception
-            }
+            }*/
+            metodo2();
 
             System.out.println("Fim do metodo1");
         }
-        public static void metodo2(){
+        public static void metodo2() throws MiException{
             System.out.println("Ini do metodo2");
             System.out.println("Fim do metodo2");
             /* for(int i =1; i<= 5; i++){

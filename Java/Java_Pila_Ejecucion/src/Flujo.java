@@ -7,7 +7,14 @@ public class Flujo {
         }
         public static void metodo1(){
             System.out.println("Ini do metodo1");
-            metodo2();
+
+            //Ahora que creamos nuestra clase de excepción personalizada, la metemos en un bloque try catch
+            try {
+                metodo2();
+            } catch (MiException exception){
+                exception.printStackTrace();//Ahora se puede tratar la clase como cualquier otro objeto de N tipo de exception
+            }
+
             System.out.println("Fim do metodo1");
         }
         public static void metodo2(){
@@ -49,7 +56,10 @@ public class Flujo {
 
             //Ahora, cabe aclarar que no se lanzan excepciones creando el objeto de la manera tradicional y que solo se pueden lanzar objetos
             //del tipo exception,  a continución se mostrara com se lanzan las expceciones
-            throw new  ArithmeticException(); //De esta manera de lanzan expceciones de manera estandar
+            //throw new  ArithmeticException(); //De esta manera de lanzan expceciones de manera estandar
+            //throw new ArithmeticException("También se pueden agregar mensajes a las excepciones"); //Excepcion con mensaje
+            //Creando un objeto exception de nuestra autoria
+            throw new MiException("Se lanzó mi excepción personalizada");
         }
 
 }

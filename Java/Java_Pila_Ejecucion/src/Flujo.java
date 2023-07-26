@@ -3,7 +3,7 @@ public class Flujo {
         public static void main(String[] args) {
             System.out.println("Ini do main");
             try {
-<<<<<<< HEAD
+
                 metodo1();
             } catch (Exception e) { //recorando el polimorfismo, podemos hace esto
                 e.printStackTrace();
@@ -33,19 +33,18 @@ public class Flujo {
             } catch (MiException exception){
                 exception.printStackTrace();//Ahora se puede tratar la clase como cualquier otro objeto de N tipo de exception
             }*/
-<<<<<<< HEAD
-=======
+
             //Solo se llama al metodo2 para ver que sucede con la excepcion
->>>>>>> 6f98e8a026ef0c49b7a5b23bd386abcf8feb056d
+
             metodo2();
 
             System.out.println("Fim do metodo1");
         }
-<<<<<<< HEAD
-        public static void metodo2() throws MiException{
-=======
+
+
+
         public static void metodo2() throws MiException{ //Si la clase esta al mismo nivel que RuntimeException, entonces tenemos que agregar esto
->>>>>>> 6f98e8a026ef0c49b7a5b23bd386abcf8feb056d
+
             System.out.println("Ini do metodo2");
             System.out.println("Fim do metodo2");
             /* for(int i =1; i<= 5; i++){

@@ -1,8 +1,8 @@
-package bytebank.bytebank.Mx.Bytebank.Test;
+package bytebank.Mx.Com.Bytebank.Test;
 
-import bytebank.bytebank.Mx.Bytebank.Modelo.Administrador;
-import bytebank.bytebank.Mx.Bytebank.Modelo.Gerente;
-import bytebank.bytebank.Mx.Bytebank.Modelo.SistemaInterno;
+import bytebank.Mx.Com.Bytebank.Modelo.Administrador;
+import bytebank.Mx.Com.Bytebank.Modelo.Gerente;
+import bytebank.Mx.Com.Bytebank.Modelo.SistemaInterno;
 
 public class TestSistemaInterno {
 

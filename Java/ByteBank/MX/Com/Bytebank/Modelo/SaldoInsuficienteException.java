@@ -1,4 +1,4 @@
-package bytebank.bytebank.Mx.Bytebank.Modelo;
+package bytebank.Mx.Com.Bytebank.Modelo;
 
 public class SaldoInsuficienteException extends Exception {
 

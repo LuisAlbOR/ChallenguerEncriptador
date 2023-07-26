@@ -1,4 +1,4 @@
-package bytebank.bytebank.Mx.Bytebank.Modelo;
+package bytebank.Mx.Com.Bytebank.Modelo;
 
 //                  extiende de
 public class Gerente extends Funcionario implements Autenticable {

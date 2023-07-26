@@ -1,7 +1,7 @@
-package bytebank.bytebank.Mx.Bytebank.Test;
+package bytebank.Mx.Com.Bytebank.Test;
 
-import bytebank.bytebank.Mx.Bytebank.Modelo.Contador;
-import bytebank.bytebank.Mx.Bytebank.Modelo.Funcionario;
+import bytebank.Mx.Com.Bytebank.Modelo.Contador;
+import bytebank.Mx.Com.Bytebank.Modelo.Funcionario;
 
 public class TestFuncionario {
 

@@ -1,5 +1,7 @@
 package bytebank.MX.Com.Bytebank.Modelo;
 
+import bytebank.Mx.Com.Bytebank.Modelo.Cliente;
+import bytebank.Mx.Com.Bytebank.Modelo.SaldoInsuficienteException;
 /**
  * Creando documentación con Javadoc
  * @author Guicho

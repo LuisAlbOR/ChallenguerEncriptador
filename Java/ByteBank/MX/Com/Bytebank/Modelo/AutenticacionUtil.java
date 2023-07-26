@@ -1,5 +1,9 @@
 package bytebank.Mx.Com.Bytebank.Modelo;
 
+//Default
+//Protected
+//Public
+//Private
 public class AutenticacionUtil {
 
 	private String clave;

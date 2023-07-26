@@ -1,5 +1,10 @@
 package bytebank.Mx.Com.Bytebank.Modelo;
 
+//<<package private>> ó Default - Accesible solo desde el paquete
+//Protected - Default + clases hijas
+//Public - Accesible desde cualquier parte
+//Private - Accesible solo desde la misma clase
+
 public class Administrador extends Funcionario implements Autenticable {
 
 	private AutenticacionUtil util;

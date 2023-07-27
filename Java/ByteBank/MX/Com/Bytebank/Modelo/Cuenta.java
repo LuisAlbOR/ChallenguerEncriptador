@@ -1,5 +1,13 @@
-package bytebank.Mx.Com.Bytebank.Modelo;
+package bytebank.MX.Com.Bytebank.Modelo;
 
+import bytebank.Mx.Com.Bytebank.Modelo.Cliente;
+import bytebank.Mx.Com.Bytebank.Modelo.SaldoInsuficienteException;
+/**
+ * Creando documentación con Javadoc
+ * @author Guicho
+ * @version 1.0
+ * @deprecated No
+ */
 public abstract class Cuenta {
 
     protected double saldo;
@@ -9,10 +17,18 @@ public abstract class Cuenta {
 
     private static int total;
 
+    /**
+     * constructor sin parámetros
+     */
     public Cuenta() {
 
     }
 
+    /**
+     * Constructor con parámetros para crear un objeto
+     * @param agencia
+     * @param numero
+     */
     public Cuenta( int agencia, int numero) {
         this.agencia = agencia;
         this.numero = numero;
@@ -23,6 +39,11 @@ public abstract class Cuenta {
 
     public abstract void deposita(double valor);
 
+    /**
+     * Método para obtener el sacar dinero y si no se puede lanza una excepcion
+     * @param valor
+     * @throws SaldoInsuficienteException
+     */
     public void saca(double valor) throws SaldoInsuficienteException {
         if(this.saldo < valor) {
             throw new SaldoInsuficienteException("Saldo insuficiente");

@@ -1,5 +1,4 @@
-package bytebank.Mx.Com.Bytebank.Modelo;
-
+package bytebank.MX.Com.Bytebank.Modelo;
 public class CuentaCorriente extends Cuenta {
 
 	public CuentaCorriente( int agencia, int numero) {
@@ -7,7 +6,7 @@ public class CuentaCorriente extends Cuenta {
 	}
 	
 	@Override
-	public void saca(double valor) throws SaldoInsuficienteException {
+	public void saca(double valor) throws bytebank.Mx.Com.Bytebank.Modelo.SaldoInsuficienteException {
 		double comision = 0.2;
 		super.saca(valor + comision);
 	}

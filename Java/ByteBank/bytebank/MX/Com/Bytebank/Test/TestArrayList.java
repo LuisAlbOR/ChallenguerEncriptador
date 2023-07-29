@@ -12,6 +12,7 @@ public class TestArrayList {
         //El operador diamante <> = Forzar a que acepte un solo tipo de objeto
         ArrayList<Cuenta> arrayList = new ArrayList<>(); //Parametrizamos arrayist usando <>
 
+        //     referencia       objeto  ->  HEAP
         Cuenta cuentaC = new CuentaCorriente(1,1);
         Cuenta cuentaA = new CuentaAhorros(2,2);
 

@@ -60,5 +60,27 @@ public class TestArrayList {
         lista.add("SP");
         //otros estados
         ArrayList nueva = new ArrayList(lista); //creando basada en la primera lista
+
+        //Probando nueva sobreescritura del metodo equals
+        ArrayList<Cuenta> cuentaArrayList = new ArrayList<>();
+
+        Cuenta cuentaCorriente = new CuentaCorriente(10,100);
+        Cuenta cuentaCorrienteDos = new CuentaCorriente(20,200);
+        cuentaArrayList.add(cuentaCorriente);
+        cuentaArrayList.add(cuentaCorrienteDos);
+        for (Cuenta cuenta: cuentaArrayList) {
+            System.out.println(cuentaArrayList);
+        }
+        //Se usa el metodo contains que compara referencias de objetos con el metodo equals por defecto
+        Cuenta cuentaCorrienteTres = new CuentaCorriente(10,100);
+        //boolean existe = cuentaArrayList.contains(cuentaCorrienteTres);
+        //System.out.println("Existe? " + existe);    //por logica es true, sin embargo a nivel de programación
+        //es false ya que son diferentes objetos, aunque tengan los mismos datos
+        //Aquí se comparan no por referencia, si no, por los datos
+        //System.out.println("Son iguales? " + cuentaCorriente.existe(cuentaCorrienteTres)); //Verificar la salida
+        //ahora corroboraremos con la sobreescritura del método equals
+        boolean existe = cuentaArrayList.contains(cuentaCorrienteTres); //porque usamos contains?, porque en el fondo
+        //Este metodo utiliza el metodo equal para comparar referencias, sin embargo lo sobreescribimos para comparar valores
+        System.out.println("Existe? " + existe);
     }
 }

@@ -99,4 +99,25 @@ public abstract class Cuenta {
     public String toString() {
         return "Numero: " + this.numero + ", Agencia: " + this.agencia;
     }
+
+
+    //Con este método podemos comparar los datos de los objetos y ver si son iguales o no
+    /*public boolean existe(Cuenta objetoCuenta){
+        if(this.agencia != objetoCuenta.getAgencia() && this.numero != objetoCuenta.getNumero()){
+            return false;
+        }
+
+        return true;
+    }*/
+
+    //Aquí se sobreescribe el metodo equal
+    @Override
+    public boolean equals(Object objeto){ //es de tipo object ya que compara todo tipo de objetos
+        Cuenta objetoCuenta = (Cuenta) objeto; //Y como recibimos un objeto génerico, tenemos que castearlo
+
+        if(this.agencia != objetoCuenta.getAgencia() && this.numero != objetoCuenta.getNumero()){
+            return false;
+        }
+        return true;
+    }
 }

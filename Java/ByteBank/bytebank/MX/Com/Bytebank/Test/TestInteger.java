@@ -30,5 +30,14 @@ public class TestInteger {
         Y tambien como existe el autoboxing (convierte el primitivo a objeto), existe el unboxing
         (convierte el objeto a primitivo)
          */
+        int numeroPrimitivo = numeroObjeto.intValue(); //Con esto convertimos el valor del objeto a un primitivo
+        byte bytePrimitivo = numeroObjeto.byteValue(); //tambien se puede con otros primitivos
+        float floatPrimitivo = numeroObjeto.floatValue();
+
+        //También con los WRAPP podemos saber los valores, bites y bytes que soporta cada tipo de primitivo
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.MIN_VALUE);
+        System.out.println(Integer.SIZE);   //bites
+        System.out.println(Integer.BYTES);  //bytes
     }
 }

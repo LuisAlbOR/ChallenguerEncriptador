@@ -42,6 +42,14 @@ public class TestOrdenarListas {
         for (Cuenta cuenta: cuentaLista) {
             System.out.println(cuenta);
         }
+
+        //Ahora como vamos a comparar con el metodo sort, de nuevo necessitamos un objeto
+        OrdenadorPorNumeroDeCuenta ordenadorPorNumeroDeCuenta = new OrdenadorPorNumeroDeCuenta();
+        cuentaLista.sort(ordenadorPorNumeroDeCuenta);   //recuerda que aun necesita el comparator interface
+
+        for (Cuenta cuenta: cuentaLista) {
+            System.out.println(cuenta);
+        }
     }
 }
 
@@ -50,12 +58,24 @@ class OrdenadorPorNumeroDeCuenta implements Comparator<Cuenta>{
 
     @Override
     public int compare(Cuenta o1, Cuenta o2) {
+        /*
+        Metodo tradicional para comparar
         if (o1.getNumero() == o2.getNumero()){
             return 0;
         } else if (o1.getNumero() > o2.getNumero()) {
             return 1;
         } else {
             return -1;
-        }
+        }*/
+        /*
+        Aquí se usa el razonamiento matematico, pues si son iguales sale 0, si el primero
+        es mayor sale un positivo(no es necesario el #1) y en caso contrario un negativo
+        (no es necesario el #-1), por eso se piensa en la logica matematica.
+        return  o1.getNumero() - o2.getNumero();
+        */
+        /*
+        y ahora la manera WRAPPER, es usando un metodo de la clase WRAPPER
+         */
+        return Integer.compare(o1.getNumero(),o2.getNumero());
     }
 }

@@ -6,7 +6,8 @@ package bytebank.bytebank.MX.Com.Bytebank.Modelo;
  * @version 1.0
  * @deprecated No
  */
-public abstract class Cuenta {
+
+public abstract class Cuenta implements Comparable<Cuenta>{
 
     protected double saldo;
     private int agencia = 1;
@@ -120,4 +121,15 @@ public abstract class Cuenta {
         }
         return true;
     }
+
+    //Mètodo de la interface
+
+    @Override
+    public int compareTo(Cuenta objetoCuenta) {
+        // Orden natural: Numero Agencia
+        //return Integer.compare(this.agencia, o.getAgencia());
+        // Orden natural: Saldo
+        return Double.compare(this.getSaldo(), objetoCuenta.getSaldo());
+    }
+
 }
